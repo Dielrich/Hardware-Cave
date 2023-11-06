@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* reset le document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* tous les titres en majuscules */
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+/* ----- Header ------*/
+
+header {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2em !important;
+}
+
+/* ----- Barre de navigation ----- (revoir le menu burger) */
+nav {
+    background-color: black;
+    height: auto;
+
+}
+
+nav, nav > div > div > ul > li > a {
+    color: gray!important;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+nav > div > div > ul > li > a:hover {
+    color: lightgray!important;
+}
+
+/* ---- bannière avec image ---- */
+
+body .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/* ---- texte de la bannière avec média query ---- */
+body .banner h2 {
+    font-size: 3rem !important;
+    text-align: center;
+    padding-top: 200px !important;
+}
+
+@media screen and (max-width: 768px) {
+    body .banner h2 {
+        font-size: 2rem !important;
+        text-align: left;
+        padding: auto;
+    }
+}
+
+/* ------ section Config du moment ----*/
+
+/* le titre */
+main section#configs div h3 {
+    font-weight: bold;
+}
+
+/* les blocs d'images */
+main section#configs div.container-img  article{
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    margin: 20px;
+    width: auto;
+}
+
+main section#configs div.container-img  article figure img {
+    border: 1px solid lightgray;
+    text-align: center;
+    height: 40vh;
+    width: auto;
+    cursor: pointer;
+}
+
+main section#configs div.container-img  article figure figcaption {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* ---------- overlay de l'image -----------*/
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    cursor: zoom-out;
+}
+
+.overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    width: auto;
+    z-index: 32;
+    cursor: default;
+}
+
+
+/* section actus */
+section#actus h3 {
+    font-weight: bold;
+}
+
+section#actus article {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+section#actus article h4 {
+    background-color: black;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: white;
+    padding: 8px;
+}
+section#actus article p, section#actus article a {
+    padding: 20px;
+}
+
+/* Section logos */
+section#marques h3 {
+    font-weight: 700;
+}
+
+section#marques div div.logos {
+    border: 1px solid lightgray;
+    margin: 30px;
+    padding: 0;
+    width: auto;
+}
+
+/* section Newsletter */
+section#newsletter h3 {
+    font-weight: 700;
+}
+
+section#newsletter div {
+    background-color: lightgray;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+section#newsletter div p {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+section#newsletter div form {
+    justify-content: center;
+    align-items: center;
+}
